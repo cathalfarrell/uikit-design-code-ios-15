@@ -73,7 +73,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <vibrancyEffect>
-                                                                <blurEffect style="regular"/>
+                                                                <blurEffect style="systemMaterial"/>
                                                             </vibrancyEffect>
                                                         </visualEffectView>
                                                     </subviews>
@@ -126,6 +126,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="u9D-cY-skc"/>
                     <navigationItem key="navigationItem" title="Featured" id="jbi-03-e3d"/>
+                    <connections>
+                        <outlet property="blurView" destination="3pC-g0-nkd" id="uME-Y8-76h"/>
+                        <outlet property="cardView" destination="rfh-Ik-4pn" id="n9E-jS-Qls"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
