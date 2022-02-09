@@ -34,12 +34,12 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Illustration 2" translatesAutoresizingMaskIntoConstraints="NO" id="Fw0-CT-gl5">
-                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="205.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="206"/>
                                                         </imageView>
                                                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MOF-7R-t1l">
-                                                            <rect key="frame" x="0.0" y="205.5" width="382" height="144.5"/>
+                                                            <rect key="frame" x="0.0" y="206" width="382" height="144"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="atl-iy-8a1">
-                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="144.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="144"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="SwiftUI for iOS 15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDJ-CW-zF1">
@@ -147,7 +147,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CourseCell" id="iNr-aW-IEF">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CourseCell" id="iNr-aW-IEF" customClass="HandbookCollectionViewCell" customModule="Design_Code" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="257"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uDs-ng-acS" customClass="CustomView" customModule="Design_Code" customModuleProvider="target">
@@ -157,6 +157,10 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycs-GP-ELK">
                                                             <rect key="frame" x="0.0" y="0.0" width="160" height="257"/>
                                                             <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="160" id="UHA-qL-fIE"/>
+                                                                <constraint firstAttribute="height" constant="257" id="dis-ob-9zO"/>
+                                                            </constraints>
                                                         </view>
                                                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="83e-a6-NeD" customClass="CustomBlurView" customModule="Design_Code" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="160" height="257"/>
@@ -178,6 +182,19 @@
                                                                     </view>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pOn-dD-PZ1">
                                                                         <rect key="frame" x="0.0" y="16" width="160" height="90"/>
+                                                                    </imageView>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo SwiftUI" translatesAutoresizingMaskIntoConstraints="NO" id="io4-PF-XUP" customClass="CustomImageView" customModule="Design_Code" customModuleProvider="target">
+                                                                        <rect key="frame" x="16" y="80" width="26" height="26"/>
+                                                                        <color key="backgroundColor" red="0.094117647058823528" green="0.12549019607843137" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="26" id="1S6-lI-eIR"/>
+                                                                            <constraint firstAttribute="height" constant="26" id="dYb-86-7ZV"/>
+                                                                        </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="10"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </imageView>
                                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7hI-vX-hmI">
                                                                         <rect key="frame" x="16" y="210" width="128" height="4"/>
@@ -235,8 +252,10 @@
                                                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="7hI-vX-hmI" secondAttribute="bottom" constant="16" id="QsQ-8T-tnU"/>
                                                                     <constraint firstItem="hnG-SQ-DYc" firstAttribute="leading" secondItem="fpG-GI-1uB" secondAttribute="leading" constant="16" id="SRO-jg-f5x"/>
                                                                     <constraint firstAttribute="trailing" secondItem="pOn-dD-PZ1" secondAttribute="trailing" id="UKI-kZ-5bE"/>
+                                                                    <constraint firstItem="io4-PF-XUP" firstAttribute="leading" secondItem="hnG-SQ-DYc" secondAttribute="leading" id="Vss-B2-8yr"/>
                                                                     <constraint firstAttribute="bottom" secondItem="fIG-Zv-FOk" secondAttribute="bottom" id="YIH-wD-Ovr"/>
                                                                     <constraint firstItem="7hI-vX-hmI" firstAttribute="leading" secondItem="fpG-GI-1uB" secondAttribute="leading" constant="16" id="aYs-op-lVZ"/>
+                                                                    <constraint firstItem="io4-PF-XUP" firstAttribute="bottom" secondItem="hnG-SQ-DYc" secondAttribute="bottom" id="peg-Y9-JsR"/>
                                                                     <constraint firstItem="S6o-6O-sML" firstAttribute="top" secondItem="hnG-SQ-DYc" secondAttribute="bottom" constant="16" id="qcH-nR-QNt"/>
                                                                     <constraint firstAttribute="trailing" secondItem="hnG-SQ-DYc" secondAttribute="trailing" constant="16" id="rvl-c0-f0N"/>
                                                                     <constraint firstItem="pOn-dD-PZ1" firstAttribute="leading" secondItem="fpG-GI-1uB" secondAttribute="leading" id="vH7-l6-h4a"/>
@@ -268,6 +287,15 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </collectionViewCellContentView>
                                                 <size key="customSize" width="160" height="257"/>
+                                                <connections>
+                                                    <outlet property="banner" destination="pOn-dD-PZ1" id="Za1-MY-tdJ"/>
+                                                    <outlet property="descriptionLabel" destination="Rfz-e8-x57" id="6j1-s4-3Um"/>
+                                                    <outlet property="logo" destination="io4-PF-XUP" id="00c-cc-Fap"/>
+                                                    <outlet property="overlay" destination="ycs-GP-ELK" id="NvY-gG-7cU"/>
+                                                    <outlet property="progressBar" destination="7hI-vX-hmI" id="3lc-XF-g1p"/>
+                                                    <outlet property="subtitleLabel" destination="YVZ-m1-nej" id="Jko-95-eDE"/>
+                                                    <outlet property="titleLabel" destination="S6o-6O-sML" id="JsG-Uh-DIk"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
@@ -307,6 +335,7 @@
                     <connections>
                         <outlet property="blurView" destination="3pC-g0-nkd" id="uME-Y8-76h"/>
                         <outlet property="cardView" destination="rfh-Ik-4pn" id="n9E-jS-Qls"/>
+                        <outlet property="handbooksCollectionView" destination="Lt2-EJ-Mi5" id="ahu-zi-dTI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -320,6 +349,7 @@
                     <tabBarItem key="tabBarItem" title="Learn Now" image="house.fill" catalog="system" id="y53-NL-wfX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="VIb-vD-kL2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <navigationBarAppearance key="standardAppearance" backgroundEffect="systemThinMaterial"/>
                     </navigationBar>
@@ -407,6 +437,7 @@
     <resources>
         <image name="Background01" width="330" height="464.5"/>
         <image name="Illustration 2" width="310" height="217"/>
+        <image name="Logo SwiftUI" width="32" height="32"/>
         <image name="bell.fill" catalog="system" width="128" height="124"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
