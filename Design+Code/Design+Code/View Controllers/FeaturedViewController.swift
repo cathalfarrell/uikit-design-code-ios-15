@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FeaturedViewController: UIViewController {
 
     @IBOutlet weak var handbooksCollectionView: UICollectionView!
     @IBOutlet weak var cardView: UIView!
@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension FeaturedViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         2
     }
