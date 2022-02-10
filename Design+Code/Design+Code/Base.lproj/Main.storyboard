@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="-140" width="414" height="464.5"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfh-Ik-4pn" customClass="CustomView" customModule="Design_Code" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="-6" width="382" height="350"/>
+                                        <rect key="frame" x="16" y="40" width="382" height="350"/>
                                         <subviews>
                                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3pC-g0-nkd" customClass="CustomBlurView" customModule="Design_Code" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="350"/>
@@ -39,7 +39,7 @@
                                                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MOF-7R-t1l">
                                                             <rect key="frame" x="0.0" y="205.5" width="382" height="144.5"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="atl-iy-8a1">
-                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="145"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="144.5"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="SwiftUI for iOS 15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDJ-CW-zF1">
@@ -102,6 +102,7 @@
                                             <constraint firstItem="3pC-g0-nkd" firstAttribute="leading" secondItem="rfh-Ik-4pn" secondAttribute="leading" id="TXd-CR-7UK"/>
                                             <constraint firstItem="3pC-g0-nkd" firstAttribute="top" secondItem="rfh-Ik-4pn" secondAttribute="top" id="W3Z-qa-vqW"/>
                                             <constraint firstItem="3pC-g0-nkd" firstAttribute="centerX" secondItem="rfh-Ik-4pn" secondAttribute="centerX" id="cZf-JF-baK"/>
+                                            <constraint firstAttribute="height" constant="350" id="fvR-oU-q6V"/>
                                             <constraint firstItem="3pC-g0-nkd" firstAttribute="centerY" secondItem="rfh-Ik-4pn" secondAttribute="centerY" id="nY3-cb-f6v"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -129,16 +130,16 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECENT HANDBOOKS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUC-x7-r6y">
-                                        <rect key="frame" x="16" y="384" width="136.5" height="16"/>
+                                        <rect key="frame" x="16" y="430" width="136.5" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lt2-EJ-Mi5">
-                                        <rect key="frame" x="16" y="416" width="382" height="257"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lt2-EJ-Mi5">
+                                        <rect key="frame" x="16" y="462" width="382" height="254"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="257" id="ZYT-kL-tZA"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="TIl-Cn-qSW"/>
                                         </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="C2E-kn-kEG">
                                             <size key="itemSize" width="160" height="257"/>
@@ -302,20 +303,19 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="rfh-Ik-4pn" firstAttribute="leading" secondItem="bUC-x7-r6y" secondAttribute="leading" id="0kv-PC-lwT"/>
-                                    <constraint firstItem="rfh-Ik-4pn" firstAttribute="trailing" secondItem="Lt2-EJ-Mi5" secondAttribute="trailing" id="Dx7-TU-ilT"/>
+                                    <constraint firstItem="rfh-Ik-4pn" firstAttribute="centerX" secondItem="E7C-q9-I4l" secondAttribute="centerX" id="54d-ki-YC3"/>
+                                    <constraint firstItem="Lt2-EJ-Mi5" firstAttribute="leading" secondItem="mwL-ae-Uj7" secondAttribute="leading" constant="16" id="9xw-n6-Txx"/>
                                     <constraint firstItem="Lt2-EJ-Mi5" firstAttribute="top" secondItem="bUC-x7-r6y" secondAttribute="bottom" constant="16" id="EQp-RQ-pl5"/>
-                                    <constraint firstItem="bUC-x7-r6y" firstAttribute="leading" secondItem="Lt2-EJ-Mi5" secondAttribute="leading" id="JVI-nV-NDe"/>
-                                    <constraint firstItem="bUC-x7-r6y" firstAttribute="top" secondItem="6FT-If-yOr" secondAttribute="bottom" constant="59.5" id="KfO-xP-3cb"/>
-                                    <constraint firstItem="6FT-If-yOr" firstAttribute="leading" secondItem="mwL-ae-Uj7" secondAttribute="leading" id="Pbe-8D-gDq"/>
-                                    <constraint firstItem="6FT-If-yOr" firstAttribute="centerX" secondItem="E7C-q9-I4l" secondAttribute="centerX" id="SG9-om-aFV"/>
+                                    <constraint firstItem="6FT-If-yOr" firstAttribute="leading" secondItem="mwL-ae-Uj7" secondAttribute="leading" id="Keg-fb-HVB"/>
+                                    <constraint firstItem="6FT-If-yOr" firstAttribute="trailing" secondItem="mwL-ae-Uj7" secondAttribute="trailing" id="S67-yZ-tDO"/>
                                     <constraint firstItem="bUC-x7-r6y" firstAttribute="top" secondItem="rfh-Ik-4pn" secondAttribute="bottom" constant="40" id="bb6-DN-jBm"/>
-                                    <constraint firstItem="6FT-If-yOr" firstAttribute="top" secondItem="mwL-ae-Uj7" secondAttribute="top" id="bfd-AH-lrO"/>
-                                    <constraint firstAttribute="bottom" secondItem="Lt2-EJ-Mi5" secondAttribute="bottom" constant="83" id="hBk-cZ-6Sb"/>
                                     <constraint firstAttribute="trailing" secondItem="rfh-Ik-4pn" secondAttribute="trailing" constant="16" id="id3-x9-ITn"/>
-                                    <constraint firstItem="6FT-If-yOr" firstAttribute="centerX" secondItem="rfh-Ik-4pn" secondAttribute="centerX" id="ok3-jL-AAZ"/>
-                                    <constraint firstItem="mwL-ae-Uj7" firstAttribute="bottom" secondItem="Lt2-EJ-Mi5" secondAttribute="bottom" constant="83" id="rvh-vq-om0"/>
-                                    <constraint firstItem="rfh-Ik-4pn" firstAttribute="top" secondItem="mwL-ae-Uj7" secondAttribute="top" constant="134" id="tGr-PC-GtN"/>
-                                    <constraint firstItem="rfh-Ik-4pn" firstAttribute="leading" secondItem="mwL-ae-Uj7" secondAttribute="leading" constant="16" id="xq1-vw-Ebq"/>
+                                    <constraint firstItem="Lt2-EJ-Mi5" firstAttribute="trailing" secondItem="E7C-q9-I4l" secondAttribute="trailing" constant="-16" id="kW2-Ig-x6Q"/>
+                                    <constraint firstItem="6FT-If-yOr" firstAttribute="top" secondItem="mwL-ae-Uj7" secondAttribute="top" id="nrd-Ad-buV"/>
+                                    <constraint firstItem="VB9-ic-Tos" firstAttribute="bottom" secondItem="Lt2-EJ-Mi5" secondAttribute="bottom" constant="83" id="q0R-DQ-YdL"/>
+                                    <constraint firstItem="mwL-ae-Uj7" firstAttribute="bottom" secondItem="Lt2-EJ-Mi5" secondAttribute="bottom" constant="40" id="rvh-vq-om0"/>
+                                    <constraint firstItem="rfh-Ik-4pn" firstAttribute="top" secondItem="VB9-ic-Tos" secondAttribute="top" constant="40" id="tGr-PC-GtN"/>
+                                    <constraint firstItem="rfh-Ik-4pn" firstAttribute="leading" secondItem="E7C-q9-I4l" secondAttribute="leading" constant="16" id="xq1-vw-Ebq"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="VB9-ic-Tos"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="mwL-ae-Uj7"/>
@@ -434,6 +434,11 @@
             <point key="canvasLocation" x="929" y="572"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="io4-PF-XUP">
+            <size key="intrinsicContentSize" width="32" height="32"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Background01" width="330" height="464.5"/>
         <image name="Illustration 2" width="310" height="217"/>
