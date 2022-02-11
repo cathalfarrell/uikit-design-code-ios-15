@@ -38,6 +38,12 @@ class FeaturedViewController: UIViewController {
             }
             .store(in: &tokens)
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailsVC = segue.destination as? CoursesViewController, let course = sender as? Course {
+            detailsVC.course = course
+        }
+    }
 }
 
 extension FeaturedViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -97,5 +103,9 @@ extension FeaturedViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true) // to hide select animation
+        let selectedCourse = courses[indexPath.section]
+        performSegue(withIdentifier: "presentCourse", sender: selectedCourse)
+    }
 }
