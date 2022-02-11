@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FeaturedViewController.swift
 //  Design+Code
 //
 //  Created by Cathal Farrell on 07/02/2022.
@@ -16,6 +16,7 @@ class FeaturedViewController: UIViewController {
 
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
 
+    @IBOutlet weak var scrollView: UIScrollView!
 
     @IBOutlet weak var coursesTableView: UITableView!
 
@@ -37,6 +38,8 @@ class FeaturedViewController: UIViewController {
                 self.tableViewHeight.constant = newContentSize.height
             }
             .store(in: &tokens)
+
+        scrollView.delegate = self
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -107,5 +110,21 @@ extension FeaturedViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true) // to hide select animation
         let selectedCourse = courses[indexPath.section]
         performSegue(withIdentifier: "presentCourse", sender: selectedCourse)
+    }
+}
+extension FeaturedViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let contentHeight = scrollView.contentSize.height
+        let lastScrollYPos = scrollView.contentOffset.y
+
+        let percentage = lastScrollYPos / contentHeight
+        if percentage <= 0.15 {
+            self.title = "Featured"
+        } else if percentage <= 0.33 {
+            self.title = "Handbooks"
+        } else {
+            self.title = "Courses"
+        }
+
     }
 }
