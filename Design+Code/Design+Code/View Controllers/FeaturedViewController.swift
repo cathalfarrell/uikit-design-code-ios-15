@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class FeaturedViewController: UIViewController {
 
@@ -14,9 +15,11 @@ class FeaturedViewController: UIViewController {
     @IBOutlet weak var blurView: UIVisualEffectView!
 
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
-    
+
 
     @IBOutlet weak var coursesTableView: UITableView!
+
+    private var tokens: Set<AnyCancellable> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,12 @@ class FeaturedViewController: UIViewController {
         coursesTableView.delegate = self
         coursesTableView.dataSource = self
         coursesTableView.layer.masksToBounds = false
+
+        coursesTableView.publisher(for: \.contentSize)
+            .sink { newContentSize in
+                self.tableViewHeight.constant = newContentSize.height
+            }
+            .store(in: &tokens)
     }
 }
 
