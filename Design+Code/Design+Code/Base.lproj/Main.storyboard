@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottomRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background01" translatesAutoresizingMaskIntoConstraints="NO" id="6FT-If-yOr">
-                                        <rect key="frame" x="0.0" y="-2" width="414" height="464.5"/>
+                                        <rect key="frame" x="0.0" y="-57" width="414" height="464.5"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfh-Ik-4pn" customClass="CustomView" customModule="Design_Code" customModuleProvider="target">
                                         <rect key="frame" x="16" y="20" width="382" height="361.5"/>
@@ -30,7 +30,7 @@
                                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3pC-g0-nkd" customClass="CustomBlurView" customModule="Design_Code" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="361.5"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rl9-pD-szB">
-                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="361"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="361.5"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Illustration 2" translatesAutoresizingMaskIntoConstraints="NO" id="Fw0-CT-gl5">
@@ -39,7 +39,7 @@
                                                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MOF-7R-t1l">
                                                             <rect key="frame" x="0.0" y="217" width="382" height="144.5"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="atl-iy-8a1">
-                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="144"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="144.5"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="SwiftUI for iOS 15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDJ-CW-zF1">
@@ -302,12 +302,20 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECENT COURSES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hk2-fJ-gEf">
+                                        <rect key="frame" x="16" y="726.5" width="116" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="rfh-Ik-4pn" firstAttribute="top" secondItem="VB9-ic-Tos" secondAttribute="top" constant="20" id="77e-gM-rUE"/>
+                                    <constraint firstItem="Hk2-fJ-gEf" firstAttribute="top" secondItem="Lt2-EJ-Mi5" secondAttribute="bottom" constant="16" id="8CW-Xb-DhL"/>
+                                    <constraint firstItem="Hk2-fJ-gEf" firstAttribute="leading" secondItem="mwL-ae-Uj7" secondAttribute="leading" constant="16" id="9oz-FK-GG9"/>
                                     <constraint firstItem="Lt2-EJ-Mi5" firstAttribute="top" secondItem="bUC-x7-r6y" secondAttribute="bottom" constant="16" id="EQp-RQ-pl5"/>
-                                    <constraint firstAttribute="bottom" secondItem="Lt2-EJ-Mi5" secondAttribute="bottom" constant="100" id="EcK-kt-lhE"/>
                                     <constraint firstItem="rfh-Ik-4pn" firstAttribute="centerX" secondItem="E7C-q9-I4l" secondAttribute="centerX" id="Iw4-Jl-0BK"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hk2-fJ-gEf" secondAttribute="bottom" constant="13.5" id="Plw-ed-kSd"/>
                                     <constraint firstItem="Lt2-EJ-Mi5" firstAttribute="leading" secondItem="mwL-ae-Uj7" secondAttribute="leading" constant="16" id="WmY-wz-ucf"/>
                                     <constraint firstItem="6FT-If-yOr" firstAttribute="top" secondItem="mwL-ae-Uj7" secondAttribute="top" id="Xdk-84-zBq"/>
                                     <constraint firstItem="bUC-x7-r6y" firstAttribute="top" secondItem="rfh-Ik-4pn" secondAttribute="bottom" constant="40" id="bb6-DN-jBm"/>
